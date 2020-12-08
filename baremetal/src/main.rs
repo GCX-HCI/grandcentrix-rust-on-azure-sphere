@@ -394,7 +394,7 @@ unsafe extern "C" fn main() {
 
     // Block includes led1RedGpio, GPIO8.
     let gpio = GpioBlock {
-        base_addr: 0x38030000, // GPIO Group 5
+        base_addr: 0x38030000,
         block_type: GPIO_BLOCK_PWM as u16,
         first_pin: 8,
         pin_count: 4,

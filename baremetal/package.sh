@@ -5,8 +5,6 @@ cp target/thumbv7em-none-eabihf/debug/rtapp target/thumbv7em-none-eabihf/debug/r
 arm-none-eabi-strip --only-keep-debug target/thumbv7em-none-eabihf/debug/rtapp.debug
 arm-none-eabi-strip target/thumbv7em-none-eabihf/debug/rtapp
 
-# Assumes there is a shared folder ~/vbox_shared - shared with a Windows VM
-
 mkdir -p target/approot/bin
 cp target/thumbv7em-none-eabihf/debug/rtapp target/approot/bin/app
 cp app_manifest.json target/approot

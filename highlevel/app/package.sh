@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Assumes there is a shared folder ~/vbox_shared - shared with a Windows VM
-
 # extract debug info into separate file and strip
 cp target/arm-v7-none-eabi/debug/sphere-app target/arm-v7-none-eabi/debug/sphere-app.debug
 sysroots/6/tools/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-musleabi/arm-poky-linux-musleabi-strip --only-keep-debug target/arm-v7-none-eabi/debug/sphere-app.debug

@@ -1,0 +1,14 @@
+[target.thumbv7em-none-eabihf]
+
+rustflags = [
+  "-C", "linker=arm-none-eabi-gcc",
+  "-C", "link-arg=-mcpu=cortex-m4",
+  "-C", "link-arg=-g",
+  "-C", "link-arg=-nostartfiles",
+  "-C", "link-arg=-Wl,--no-undefined",
+  "-C", "link-arg=-Wl,-n",
+  "-C", "link-arg=-Wl,-Tlinker.ld"
+]
+
+[build]
+target = "thumbv7em-none-eabihf"

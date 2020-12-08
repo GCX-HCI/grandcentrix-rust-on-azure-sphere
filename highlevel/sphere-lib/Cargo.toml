@@ -1,0 +1,10 @@
+[package]
+name = "sphere-lib"
+version = "0.1.0"
+authors = ["Bjoern Quentin <bjoern.quentin@grandcentrix.net>"]
+edition = "2018"
+
+[dependencies]
+sphere-sys = { path = "../sphere-sys"}
+libc = {version = "0.2.65", default-features = false }
+

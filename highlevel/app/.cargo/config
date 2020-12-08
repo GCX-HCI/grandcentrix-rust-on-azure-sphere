@@ -1,0 +1,31 @@
+[target.arm-v7-none-eabi]
+linker = 'sysroots/7+Beta2010/tools/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-musleabi/arm-poky-linux-musleabi-gcc'
+runner = 'arm-eabi-gdb'
+rustflags = [
+  "-C", "link-arg=-flinker-output=exec",
+  "-C", "link-arg=-Wl,--dynamic-linker=/lib/ld-musl-armhf.so.1",
+  "-C", "link-arg=-v",
+  "-C", "link-arg=--sysroot=./sysroots/7+Beta2010/",
+  "-C", "link-arg=-L",
+  "-C", "link-arg=./sysroots/7+Beta2010/usr/lib/",
+  "-C", "link-arg=-L",
+  "-C", "link-arg=./sysroots/7+Beta2010/lib/",
+  "-C", "link-arg=-Wl,--no-undefined,--gc-sections",
+  "-C", "link-arg=-nodefaultlibs",
+  "-C", "link-arg=-march=armv7ve+neon",
+  "-C", "link-arg=-mcpu=cortex-a7",
+  "-C", "link-arg=-mthumb",
+  "-C", "link-arg=-mfpu=neon",
+  "-C", "link-arg=-mfloat-abi=hard",
+  "-C", "link-arg=-Wl,-Bdynamic",
+  "-C", "link-arg=-lapplibs",
+  "-C", "link-arg=-lazureiot",
+  "-C", "link-arg=-lpthread",
+  "-C", "link-arg=-lcurl",
+  "-C", "link-arg=-ltlsutils",
+  "-C", "link-arg=-lgcc_s",
+  "-C", "link-arg=-lc",
+  "-C", "link-arg=-Os",
+]
+[build]
+target = "arm-v7-none-eabi"

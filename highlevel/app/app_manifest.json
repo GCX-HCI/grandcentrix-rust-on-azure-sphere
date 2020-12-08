@@ -1,0 +1,21 @@
+{
+  "SchemaVersion": 1,
+  "Name": "SphereApp",
+  "ComponentId": "00f3df71-a397-4a5e-89cb-7dde6486888d",
+  "EntryPoint": "/bin/app",
+  "CmdArgs": [ ],
+  "Capabilities": {
+    "AllowedConnections": [],
+    "AllowedTcpServerPorts": [],
+    "AllowedUdpServerPorts": [],
+    "Gpio": [8, 9, 10],
+    "Uart": [],
+    "I2cMaster": [],
+    "SpiMaster": [],
+    "WifiConfig": false,
+    "NetworkConfig": true,
+    "SystemTime": false
+  },
+  "TargetApplicationRuntimeVersion": 1,
+  "AzureSphereTargetApiSet": "7+Beta2010"
+}
